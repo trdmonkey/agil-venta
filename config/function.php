@@ -146,7 +146,7 @@ function delete($tableName, $id) {
     $result = mysqli_query($conn, $query);
     return $result;
 
-
+    
 }
 
 
