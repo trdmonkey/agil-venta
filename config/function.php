@@ -142,8 +142,9 @@ function delete($tableName, $id) {
     $table = validate($tableName);
     $id = validate($id);
 
-    $query = "DELETE FROM $table WHERE id='$id'";
-
+    $query = "DELETE FROM $table WHERE id='$id' LIMIT 1";
+    $result = mysqli_query($conn, $query);
+    return $result;
 
 
 }
