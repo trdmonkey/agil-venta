@@ -28,7 +28,8 @@
                             <th>No.</th>
                             <th>Nombre</th>
                             <th>Email</th>
-                            <th>Action</th>
+                            <th>Telefono</th>
+                            <th>Accion</th>
                         </tr>
                     </thead>
                     <tbody>          
@@ -37,8 +38,9 @@
                             <td><?= $adminItem['id'] ?></td>
                             <td><?= $adminItem['name'] ?></td>
                             <td><?= $adminItem['email'] ?></td>
+                            <td><?= $adminItem['phone'] ?></td>
                             <td>
-                                <a href="admins-edit.php" class="btn btn-success btn-sm">Editar</a>
+                                <a href="admins-edit.php?id=<?= $adminItem['id']; ?>" class="btn btn-success btn-sm">Editar</a>
                                 <a href="admins-delete.php" class="btn btn-danger btn-sm">Eliminar</a>
                             </td>
                         </tr>
