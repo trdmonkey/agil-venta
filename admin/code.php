@@ -16,8 +16,25 @@ if(isset($_POST['saveAdmin'])) {
         $emailCheck = mysqli_query($conn, $viewMail);
         if($emailCheck) {
             if(mysqli_num_rows($emailCheck) > 0) {
-                
+                redirect('admins-create.php','Esta cuenta de correo electronico ya existe.');
             }
+        }
+
+        $bcrypt_password = password_hash($password, PASSWORD_BCRYPT);
+
+        $data = [
+            'name' => $name,
+            'email' => $email,
+            'password' => $bcrypt_password,
+            'phone' => $phone,
+            'is_ban' => $is_ban
+        ];
+
+        $result = insert('admins', $data);
+        if($result) {
+            redirect('admins.php','Admin creado exitosamente!');
+        } else {
+            redirect('admins-create.php','Algo salio mal!');
         }
 
     } else {
