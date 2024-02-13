@@ -9,6 +9,17 @@
         </div>
         <div class="card-body">
             <?php alertMessage(); ?>
+
+            <?php
+            $admins = getAll('admins');
+            if(!$admins) {
+                echo '<h4>Algo salió mal!</h4>';
+                return false;
+            }
+            if(mysqli_num_rows($admins) > 0) {
+
+            
+            ?>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover">
 
@@ -20,13 +31,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <?php
-                        $admins = getAll('admins');
-                        if(mysqli_num_rows($admins) > 0) {
-
-                        
-                        ?>
+                    <tbody>          
                         <?php foreach($admins as $adminItem) : ?>
                         <tr>
                             <td><?= $adminItem['id'] ?></td>
@@ -38,18 +43,19 @@
                             </td>
                         </tr>
                         <?php endforeach; ?>
-                        <?php
-                        } else {
-                            ?>
-                            <tr>
-                                <td colspan="4">Registro no encontrado.</td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
+
+                        
                     </tbody>
                 </table>
             </div>
+            <?php
+            } else {
+                ?>
+                    <h4 class="mb-0">Registro no encontrado.</h4>
+                <?php
+            }
+            ?>
+            
         </div>
     </div>
 </div>
