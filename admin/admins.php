@@ -41,7 +41,7 @@
                             <td><?= $adminItem['phone'] ?></td>
                             <td>
                                 <a href="admins-edit.php?id=<?= $adminItem['id']; ?>" class="btn btn-success btn-sm" title="Editar registro"><i class="fa-solid fa-pen"></i></a>
-                                <a href="admins-delete.php" class="btn btn-danger btn-sm" title="Eliminar registro"><i class="fa-solid fa-trash"></i></a>
+                                <a href="admins-delete.php?id=<?= $adminItem['id']; ?>" class="btn btn-danger btn-sm" title="Eliminar registro"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
