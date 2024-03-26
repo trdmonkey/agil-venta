@@ -2,7 +2,7 @@
   <div class="container">
 
     <a class="navbar-brand ms-auto" href="#">
-        <img src="./img/logo2.png" alt="Agil Ventas Logo" class="img-fluid max-width-100 mw-100 logo-img" style="max-height: 30px;">
+        <img src="./img/LOGOAGIL1-removebg-preview.png" alt="Agil Ventas LOVO" class="img-fluid max-width-100 mw-100 logo-img" style="max-height: 30px;" />
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
