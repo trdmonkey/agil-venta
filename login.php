@@ -21,15 +21,15 @@ if(isset($_SESSION['loggedIn'])) {
                     <?php alertMessage(); ?>
 
                     <div class="p-5">
-                        <h4 class="text-dark mb-3">Sign into your POS System</h4>
+                        <h4 class="text-dark text-opacity-50 mb-4 small" style="letter-spacing: 3px;">Sign into your POS System</h4>
                         <form action="login-code.php" method="POST">
 
                             <div class="mb-3">
-                                <label>Enter Email ID</label>
+                                <label class="text-dark text-opacity-75">Enter Email ID</label>
                                 <input type="email" name="email" class="form-control" required />
                             </div>
                             <div class="mb-3">
-                                <label>Enter Password</label>
+                                <label class="text-dark text-opacity-75">Enter Password</label>
                                 <input type="password" name="password" class="form-control" required />
                             </div>
                             <div class="my-3">
